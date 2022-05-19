@@ -1,0 +1,15 @@
+2022-05-16 16:31:07,177  INFO [main] TestBase:40 - *********************Starting up initialization**************************
+2022-05-16 16:31:09,977  INFO [main] TestBase:46 - Chrome browser launched
+2022-05-16 16:31:10,108  INFO [main] TestBase:54 - Window Maximized
+2022-05-16 16:31:10,122  INFO [main] TestBase:56 - Deleted all cookies
+2022-05-16 16:31:10,130  INFO [main] TestBase:58 - Page load timeout is setup 30 seconds
+2022-05-16 16:31:10,136  INFO [main] TestBase:60 - Setting up implicit wait time out for 30 seconds
+2022-05-16 16:31:12,346  INFO [main] TestBase:63 - Launching the URL https://waaze2stg1fntleuat.z20.web.core.windows.net/
+2022-05-16 16:31:12,346  INFO [main] TestBase:65 - *********************Completed initialization**************************
+2022-05-16 16:31:12,517  INFO [main] TestBase:246 - In validEmailExistingAndNonExisting_FP_10_11  ->  data is  {isExecute=YES, Email=test1@worldaccepatnce.com, MainError=null, InstanceId=4.8592557E7, EmailExists=YES, AlternateEmail=null, TestCaseId=10.0, TestMethod=validEmailExistingAndNonExisting_FP_10_11, ConfirmPassword=Null, SuccessMessage=null, EmailSubject=World Acceptance Corporation account email verification code, RESEND=NO, ErrorMessage=Null, GmailPassword=V1h66Jydc#j*bVhp, Password=Null}
+2022-05-16 16:31:12,517  INFO [main] TestBase:248 - *********************Start of  test 10.0 **************************
+2022-05-16 16:31:13,712  INFO [main] TestBase:97 - clicked on forgot password link
+2022-05-16 16:31:15,083  INFO [main] TestBase:78 - In forgot password screen specified the email as: test1@worldaccepatnce.com
+2022-05-16 16:31:15,157  INFO [main] TestBase:90 - Clicked on send verification code
+2022-05-16 16:31:16,567  INFO [main] TestBase:69 - Is Verify Email Address Page Displayed: true
+2022-05-16 16:31:20,137  INFO [main] TestBase:850 - java.lang.AssertionError: AUTHENTICATE failed.
