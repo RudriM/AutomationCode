@@ -36,6 +36,8 @@ public class LoginPage extends TestBase{
 	@FindBy(xpath="//a[@id='createAccount']")
 	WebElement signUp;	
 	
+	
+	
 	public LoginPage(){
 		PageFactory.initElements(driver, this);
 	}
@@ -56,7 +58,6 @@ public class LoginPage extends TestBase{
 		log.info("Specified the sign in password as: " +password);
 		signIn.click();
 		log.info("Click on sign in button");
-		
 	}
 	
 	public RegistrationPageStep1 clickOnSignUp() {

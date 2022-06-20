@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [OAMTestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="OAMTests(failed)">
-    <parameter name="InstanceId" value="4.8592557E7"/>
-    <parameter name="Date" value="20220516043112"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.wac.cwp.testcases.FogrotPasswordTestCases">
+      <class name="com.wac.cwp.testcases.SettingsPageTestCase">
         <methods>
-          <include name="validEmailExistingAndNonExisting_FP_10_11" invocation-numbers="0"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="verifySetUpRecurring_218_223"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.wac.cwp.testcases.FogrotPasswordTestCases -->
+      </class> <!-- com.wac.cwp.testcases.SettingsPageTestCase -->
     </classes>
-  </test> <!-- OAMTests(failed) -->
-</suite> <!-- Failed suite [OAMTestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

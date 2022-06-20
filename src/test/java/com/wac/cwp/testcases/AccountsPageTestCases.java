@@ -162,9 +162,6 @@ public class AccountsPageTestCases extends TestBase{
 			
 			acctPge.verifyAccountSummaryCardDetailsForDueDateNotPassedUser(map);
 		}
-		
-		
-		
 	}
 	
 	@Test(priority = 4, dataProvider = "apt123_124_368", description = "Verify Your Loans Section")
@@ -194,7 +191,6 @@ public class AccountsPageTestCases extends TestBase{
 		acctPge.verifyLoanDetailsCard(map);
 		
 		softAssert.assertAll();
-		
 	}
 	
 	@Test(priority = 5, dataProvider = "apt125_126", description = "Verify Recent Payment Details")
@@ -253,13 +249,11 @@ public class AccountsPageTestCases extends TestBase{
 			result = 1;
 			PractiTest.runWithAttachments(instance, result, screenShot, failureReason);
 		}
-		  
 		else if (rlt.getStatus() == ITestResult.SKIP)
 		{
 			result = 2;
 		}
 		//Closing the browser
 		driver.close();
-		  
 	}
 }

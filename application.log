@@ -1,15 +1,19 @@
-2022-05-16 16:31:07,177  INFO [main] TestBase:40 - *********************Starting up initialization**************************
-2022-05-16 16:31:09,977  INFO [main] TestBase:46 - Chrome browser launched
-2022-05-16 16:31:10,108  INFO [main] TestBase:54 - Window Maximized
-2022-05-16 16:31:10,122  INFO [main] TestBase:56 - Deleted all cookies
-2022-05-16 16:31:10,130  INFO [main] TestBase:58 - Page load timeout is setup 30 seconds
-2022-05-16 16:31:10,136  INFO [main] TestBase:60 - Setting up implicit wait time out for 30 seconds
-2022-05-16 16:31:12,346  INFO [main] TestBase:63 - Launching the URL https://waaze2stg1fntleuat.z20.web.core.windows.net/
-2022-05-16 16:31:12,346  INFO [main] TestBase:65 - *********************Completed initialization**************************
-2022-05-16 16:31:12,517  INFO [main] TestBase:246 - In validEmailExistingAndNonExisting_FP_10_11  ->  data is  {isExecute=YES, Email=test1@worldaccepatnce.com, MainError=null, InstanceId=4.8592557E7, EmailExists=YES, AlternateEmail=null, TestCaseId=10.0, TestMethod=validEmailExistingAndNonExisting_FP_10_11, ConfirmPassword=Null, SuccessMessage=null, EmailSubject=World Acceptance Corporation account email verification code, RESEND=NO, ErrorMessage=Null, GmailPassword=V1h66Jydc#j*bVhp, Password=Null}
-2022-05-16 16:31:12,517  INFO [main] TestBase:248 - *********************Start of  test 10.0 **************************
-2022-05-16 16:31:13,712  INFO [main] TestBase:97 - clicked on forgot password link
-2022-05-16 16:31:15,083  INFO [main] TestBase:78 - In forgot password screen specified the email as: test1@worldaccepatnce.com
-2022-05-16 16:31:15,157  INFO [main] TestBase:90 - Clicked on send verification code
-2022-05-16 16:31:16,567  INFO [main] TestBase:69 - Is Verify Email Address Page Displayed: true
-2022-05-16 16:31:20,137  INFO [main] TestBase:850 - java.lang.AssertionError: AUTHENTICATE failed.
+2022-06-20 09:12:38,420  INFO [main] TestBase:40 - *********************Starting up initialization**************************
+2022-06-20 09:12:39,499  INFO [main] TestBase:46 - Chrome browser launched
+2022-06-20 09:12:39,628  INFO [main] TestBase:54 - Window Maximized
+2022-06-20 09:12:39,641  INFO [main] TestBase:56 - Deleted all cookies
+2022-06-20 09:12:39,648  INFO [main] TestBase:58 - Page load timeout is setup 30 seconds
+2022-06-20 09:12:39,652  INFO [main] TestBase:60 - Setting up implicit wait time out for 30 seconds
+2022-06-20 09:12:40,646  INFO [main] TestBase:63 - Launching the URL https://waaze2stg1fntleuat.z20.web.core.windows.net/
+2022-06-20 09:12:40,647  INFO [main] TestBase:65 - *********************Completed initialization**************************
+2022-06-20 09:12:40,679  INFO [main] TestBase:336 - In verifyManageRecurringChange_APT_221  ->  data is  {CardNumber=4111 1111 1111 1111, isExecute=YES, AccountPhone=Null, ExpiryDate=30-Jun-2025, CVV=111.0, Email=tran.ky@mailinator.com, RemainingPayments=Null, PaymentDate=06-Dec-2023, InstanceId=5.2159812E7, AccountEmail=Null, TestCaseId=221.0, Addresss=Null, NextPaymentsAndMethods=Null, stopRecurringBody=Null, TestMethod=verifyManageRecurringChange_APT_221, LoanNumber=Null, RecurringLoanNumber1=Null, RecurringLoanNumber0=Null, NoOfLoans=Null, FullName=Null, RecurringLoanNumber2=Null, MonthlyAmount=Null, Password=Test1234}
+2022-06-20 09:12:40,679  INFO [main] TestBase:338 - *********************Start of  test 221.0 **************************
+2022-06-20 09:12:41,624  INFO [main] TestBase:56 - Specified the sign in name as: tran.ky@mailinator.com
+2022-06-20 09:12:41,671  INFO [main] TestBase:58 - Specified the sign in password as: Test1234
+2022-06-20 09:12:41,794  INFO [main] TestBase:60 - Click on sign in button
+2022-06-20 09:12:45,164  INFO [main] TestBase:127 - Clicked on Settings Link
+2022-06-20 09:12:48,492  INFO [main] TestBase:127 - Clicked on Settings Link
+2022-06-20 09:12:48,786  INFO [main] TestBase:326 - Specified date is06-Dec-2023
+2022-06-20 09:12:49,232  INFO [main] TestBase:332 - Specified card number is4111 1111 1111 1111
+2022-06-20 09:12:49,355  INFO [main] TestBase:335 - Specified expiry date is30-Jun-2025
+2022-06-20 09:12:49,461  INFO [main] TestBase:338 - Specified CVV number is111.0

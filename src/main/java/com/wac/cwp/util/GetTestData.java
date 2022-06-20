@@ -16,7 +16,7 @@ import com.wac.cwp.base.TestBase;
 public class GetTestData extends TestBase {
 	
 	
-	public static String TESTDATA_SHEET_PATH = workingDir+"\\src\\test\\java\\com\\wac\\cwp\\testdata\\CWPTestData.xlsx";
+	public static String TESTDATA_SHEET_PATH = workingDir+"\\src\\test\\java\\com\\wac\\cwp\\testdata\\CWPTestData1.xlsx";
 	
 	static Workbook book;
 	static Sheet sheet;	

@@ -9,10 +9,15 @@
   <test thread-count="5" name="OAMTests">
     <classes>
      <!--   <class name="com.wac.cwp.testcases.RegistrationTestCases"/>
-      <class name="com.wac.cwp.testcases.HeaderAndFooterLinkTestCases"/> 
-      <class name="com.wac.cwp.testcases.AccountsPageTestCases"/> -->
-     <!--  <class name="com.wac.cwp.testcases.LoginTestCases"/>  -->
+      <class name="com.wac.cwp.testcases.HeaderAndFooterLinkTestCases"/>  
+      <class name="com.wac.cwp.testcases.AccountsPageTestCases"/> 
+      <class name="com.wac.cwp.testcases.LoginTestCases"/>  
       <class name="com.wac.cwp.testcases.FogrotPasswordTestCases"/> 
+      <class name="com.wac.cwp.testcases.LoanDetailsPageTestCase"/> 
+      <class name="com.wac.cwp.testcases.PaymentHistoryPageTestCase"/> -->
+      <class name="com.wac.cwp.testcases.SettingsPageTestCase"/> 
+      
+      
     </classes>
   </test> <!-- OAMTests -->
 </suite> <!-- OAMTestSuite -->
