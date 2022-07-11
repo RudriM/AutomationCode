@@ -1,11 +1,19 @@
 package com.wac.cwp.pages;
 
+import static org.testng.Assert.assertFalse;
+
+import java.awt.Desktop.Action;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import com.wac.cwp.base.TestBase;
@@ -85,7 +93,54 @@ public class AccountsPage extends TestBase {
 	@FindBy(xpath="//button[text()='Apply for a Loan']")
 	WebElement applyForALoan;
 	
-		
+	@FindBy(xpath = "//div[@class = 'modal-dialog paymentModal modal-lg modal-dialog-centered modal-dialog-scrollable']")
+	WebElement makePaymentModal;
+	
+	@FindBy(xpath = "//button[text() = 'Make a Payment']")
+	WebElement loanDetailsMakePayment;
+	
+	@FindBy(xpath = "//div[contains(text(),'Loan #')]")
+	WebElement loanPageLoanNo;
+	
+	@FindBy(xpath = "(//*[local-name() ='svg'])[4]")
+	WebElement dueDatePassedAccountToolkit;
+	
+	@FindBy(xpath = "(//*[local-name() ='svg'])[8]")
+	WebElement dueDatePassedLoanToolkit;
+	
+	@FindBy(xpath = "(//*[local-name() ='svg'])[3]")
+	WebElement loanLastUpdate;
+	
+	@FindBy(id = "dataUpdate")
+	WebElement loanLastUpdatedToolkitIconMessgae;
+	
+	@FindBy(id = "feesIcon")
+	WebElement accountSummaryToolkitMsg;
+	
+	@FindBy(id = "overdueIcon")
+	WebElement loanDetailsToolkitMsg;
+	
+	@FindBy(xpath = "//label[@id='select_amount_label']")
+	WebElement chooseAmountLabel;
+	
+	@FindBy(xpath = "//ul[@Class='MuiList-root MuiList-padding MuiMenu-list css-r8u8y9']/li[1]")
+	WebElement chooseAmount;
+	
+	@FindBy(xpath = "//input[@name = 'select_payment_amount']")
+	WebElement openSelectPaymentDropDown;
+	
+	@FindBy(xpath = "//input[@name = 'select_payment_amount']")
+	WebElement selectedAmt;
+	
+	@FindBy(xpath = "//button[text()='Cancel']")
+	WebElement cancelBtn;
+	
+	@FindBy(xpath = "//button[text() = 'View Initial Disclosures']")
+	WebElement viewDisclosures;
+	
+	@FindBy(xpath = "//button[text() = 'Apply for a Loan']")
+	WebElement applyForLoan;
+	
 	public AccountsPage(){
 		PageFactory.initElements(driver, this);
 	}
@@ -93,7 +148,6 @@ public class AccountsPage extends TestBase {
 	public boolean verifyAccountsPageIsDisplayed() {
 		boolean isDisplayed = welcomeMsg.isDisplayed();
 		return isDisplayed;
-		
 	}
 	
 	public String getWelcomeMsg() throws InterruptedException {
@@ -273,11 +327,47 @@ public class AccountsPage extends TestBase {
 		softAssert.assertAll();
 	}
 	
+	public void LoanDetailsPageAccountSummary(HashMap<String, String> map) {
+		Waits.explicitWaitForElementVisible(viewLoanDetails);
+		
+		SoftAssert softAssert = new SoftAssert();
+		ClickViewLoanDetailsLink();
+		
+		String NoOfDaysToDueDate = daysRemainingForNextDue.getText();
+		log.info("Number of days for due date is: " +NoOfDaysToDueDate);
+		
+		String dueDate = nextDueDateAndLoan.getText();
+		log.info("Due Date is: " +dueDate);
+		
+		String amountDue = nextDueAmount.getText();
+		log.info("Amount due is: " +amountDue);
+		
+		boolean isPayNowButtonDisplayed = loanDetailsMakePayment.isDisplayed();
+		log.info("Is make a payment button displayed: " +isPayNowButtonDisplayed);
+		
+		softAssert.assertEquals(NoOfDaysToDueDate, map.get("NumberOfDaysToDueDate"), "Actual value is different from expected");
+		
+		softAssert.assertEquals(dueDate, map.get("LoanNumber"), "Actual value is different from expected");
+		
+		softAssert.assertEquals(amountDue, map.get("AmountDue"), "Actual value is different from expected");
+		
+		softAssert.assertTrue(isPayNowButtonDisplayed, "Pay Now button is not displayed");
+		
+	}
+	
+	public boolean isDisplayedMakePaymentModel() {
+		Waits.explicitWaitForElementVisible(payNowButton);
+		payNowButton.click();
+		boolean isDisplayed = makePaymentModal.isDisplayed();
+		log.info("Make a paytment modal is displayed? " +isDisplayed);
+		return isDisplayed;
+	}
+	
 	public boolean verifyViewAllLinkIsDisplayed() {
 		Waits.explicitWaitForElementVisible(viewAll);
 		boolean isDisplayed = viewAll.isDisplayed();
 		return isDisplayed;
-	}
+	}	
 	
 	
 	public AccountsPage clickAccountsLink() {
@@ -303,5 +393,129 @@ public class AccountsPage extends TestBase {
 		log.info("Clicked on Loan Details Link");
 		return new LoanDetailsPage();
 	}
+	
+	public PaymentHistoryPage clickOnViewAllLink() {
+		viewAll.click();
+		log.info("Click on view all link");
+		return new PaymentHistoryPage();
+	}
+	
+	// Click on loan number
+	public LoanDetailsPage ClickLoanLoanNumber() throws InterruptedException {
+	Waits.explicitWaitForElementVisible(yourLoansSection);
 
+	int totalLoan = loanNumber.size();
+	log.info("no of loan size: "  +totalLoan);
+		
+	for(int i =0; i<totalLoan ; i++) {
+		String loanNo = loanNumber.get(i).getText();
+		log.info("Click on loan number: " +loanNo);
+
+		loanNumber.get(i).click();
+		log.info("Successfully navigate to loan page");
+		accountLink.click();
+		}
+		return new LoanDetailsPage();
+	}
+	
+	//Click on make a payment button
+	public void MakePayment(HashMap<String, String> map) throws InterruptedException {
+		//Waits.explicitWaitForElementVisible(yourLoansSection);
+		SoftAssert softAssert = new SoftAssert();
+
+		int totalMakePaymentBtn = makeAPaymentButton.size();
+		log.info("Total payment button for loan is: " +totalMakePaymentBtn);
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		for(int i =0; i<totalMakePaymentBtn; i++) {
+
+			Actions a = new Actions(driver);
+			a.moveToElement(makeAPaymentButton.get(i)).click().perform();
+			openSelectPaymentDropDown.click();
+			chooseAmount.click();
+			String chooseAmountOption = chooseAmount.getText();
+			log.info("Dropdown amount is" +chooseAmountOption);
+			cancelBtn.click();
+			softAssert.assertEquals(chooseAmountOption, map.get("CurrentBalance"+i), "Actual value is different from expected");
+		}
+	}
+	//Toolkit verification for Due date passed user 
+	public boolean isDisplayedLoanLastUpdateToolkit() {
+		Waits.explicitWaitForElementVisible(loanLastUpdate);
+		SoftAssert softAssert = new SoftAssert();
+		Actions a = new Actions(driver);
+		a.moveToElement(loanLastUpdate).perform();
+		boolean loanUpdateToolkitMessage = loanLastUpdatedToolkitIconMessgae.isDisplayed();
+		softAssert.assertTrue(loanUpdateToolkitMessage);
+		return loanUpdateToolkitMessage;
+	}
+	
+	public boolean isDisplayedAccountSummaryToolkit() {
+		Waits.explicitWaitForElementVisible(dueDatePassedAccountToolkit);
+		SoftAssert softAssert = new SoftAssert();
+		Actions a = new Actions(driver);
+		a.moveToElement(dueDatePassedAccountToolkit).perform();
+		boolean accountSummaryToolkitMessage = accountSummaryToolkitMsg.isDisplayed();
+		softAssert.assertTrue(accountSummaryToolkitMessage);
+		return accountSummaryToolkitMessage;
+	}
+	
+	public boolean isDisplayedLoanToolkit() {
+		Waits.explicitWaitForElementVisible(dueDatePassedLoanToolkit);
+		SoftAssert softAssert = new SoftAssert();
+		Actions a = new Actions(driver);
+		a.moveToElement(dueDatePassedLoanToolkit).perform();
+		boolean loanSummaryToolkitMessage = loanDetailsToolkitMsg.isDisplayed();
+		softAssert.assertTrue(loanSummaryToolkitMessage);
+		return loanSummaryToolkitMessage;
+	}
+	
+	public void clickApplyLoan() {
+		applyForLoan.click();
+		log.info("Clicked on the Apply for loan link");
+	}
+	
+	public void clickDisclosures() {
+		viewDisclosures.click();
+		log.info("Clicked on the view Disclosures link");
+	}
+	
+	public void verifyTheURLOpened(String expectedURL) {
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		String actualUrl = driver.getCurrentUrl();
+		expectedURL = expectedURL.trim();
+		log.info("The actual url opened is : " +actualUrl);
+		log.info("The expected url to open is : " +expectedURL);
+		Assert.assertEquals(actualUrl, expectedURL, "The actual URL opened is different from expected");
+	}
+	
+	public void verifyDisclosuresTab(String expectedURL) {
+	    ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+	    driver.switchTo().window(tabs.get(1));
+	    String actualUrl = driver.getCurrentUrl();
+		expectedURL = expectedURL.trim();
+		log.info("The actual url opened is : " +actualUrl);
+		log.info("The expected url to open is : " +expectedURL);
+		Assert.assertEquals(actualUrl, expectedURL, "The actual URL opened is different from expected");
+
+	}
+	
+	//Toolkit should not displayed for due date passed user
+	public boolean verifyAccountToolkitIconPresent() {
+		if(dueDatePassedAccountToolkit.isDisplayed()) {
+			log.info("Account summary Toolikit is present");
+			return true;
+		}else
+			log.info("Account summary Toolikit is not present");
+			return false;
+	}
+	
+	public boolean verifyLoanToolkitIconPresent() {
+		if(dueDatePassedLoanToolkit.isDisplayed()) {
+			log.info("Loan summary Toolikit is present");
+			return true;
+		}else
+			log.info("Loan summary Toolikit is not present");
+			return false;
+	}
 }

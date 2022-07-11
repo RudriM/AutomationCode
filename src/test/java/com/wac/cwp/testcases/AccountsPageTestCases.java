@@ -71,6 +71,55 @@ public class AccountsPageTestCases extends TestBase{
 		return data.toArray(); 
 	}
 	
+	@DataProvider
+	public Object[] apt127() {
+		List<HashMap<String, String>> data = GetTestData.getTestData2("AccountsPage", "verifyPaymentModel_APT_127");
+		return data.toArray(); 
+	}
+	
+	@DataProvider
+	public Object[] apt128() {
+		List<HashMap<String, String>> data = GetTestData.getTestData2("AccountsPage", "verifyAccountSummaryLoan_apt_128");
+		return data.toArray(); 
+	}
+	
+	@DataProvider
+	public Object[] apt129_130() {
+		List<HashMap<String, String>> data = GetTestData.getTestData2("AccountsPage", "verifyLoanPageOpened_apt_129_130");
+		return data.toArray(); 
+	}
+	
+	@DataProvider
+	public Object[] apt_136_137_138() {
+		List<HashMap<String, String>> data = GetTestData.getTestData2("AccountsPage", "verifyToolKitMsg_136_137_138");
+		return data.toArray(); 
+	}
+	
+	@DataProvider
+	public Object[] apt_131_132() {
+		List<HashMap<String, String>> data = GetTestData.getTestData2("AccountsPage", "verifyLoanAmountDue_apt_131_132");
+		return data.toArray(); 
+	}
+	
+	@DataProvider
+	public Object[] apt_133_323() {
+		List<HashMap<String, String>> data = GetTestData.getTestData2("AccountsPage", "verifyLink_133_323");
+		return data.toArray(); 
+	}
+	
+	@DataProvider
+	public Object[] apt_369_370() {
+		List<HashMap<String, String>> data = GetTestData.getTestData2("AccountsPage", "verifyToolkitIsNotPresentForDueDateNotPassed_369_370");
+		return data.toArray(); 
+	}
+
+	@DataProvider
+	public Object[] apt_135() {
+		List<HashMap<String, String>> data = GetTestData.getTestData2("AccountsPage", "verifyClickOnViewALL_135");
+		return data.toArray(); 
+	}
+	
+	
 	@Test(priority = 1, dataProvider = "apt119", description = "Accounts Link At The Top")
 	public void verifyAccountLinkAtTop_APT_119(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
 		
@@ -226,6 +275,206 @@ public class AccountsPageTestCases extends TestBase{
 		
 	}
 	
+	@Test(priority = 6, dataProvider = "apt127", description = "Verify Payment Modal Open")
+	public void verifyPaymentModel_APT_127(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
+		
+		SoftAssert softAssert = new SoftAssert();
+		
+		String dateAndTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		
+		String instance = map.get("InstanceId");
+			
+		ctx.getCurrentXmlTest().addParameter( "InstanceId", instance);
+		
+		ctx.getCurrentXmlTest().addParameter( "Date", dateAndTime);
+				
+		log.info("In verifyPaymentModel_APT_127  ->  data is  " + map);	
+		
+		log.info("*********************Start of  test " +map.get("TestCaseId")+ " **************************");
+
+		lgnPge.login(map.get("Email"), map.get("Password"));
+		
+		boolean isDisplayedPaymentModel = acctPge.isDisplayedMakePaymentModel();
+		softAssert.assertTrue(isDisplayedPaymentModel);		
+	}
+	
+	@Test(priority = 7, dataProvider = "apt128", description = "Verify account summary in Loan details page Open")
+	public void verifyAccountSummaryLoan_apt_128(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
+		
+		SoftAssert softAssert = new SoftAssert();
+		
+		String dateAndTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		
+		String instance = map.get("InstanceId");
+			
+		ctx.getCurrentXmlTest().addParameter( "InstanceId", instance);
+		
+		ctx.getCurrentXmlTest().addParameter( "Date", dateAndTime);
+				
+		log.info("In verifyAccountSummaryLoan_apt_128  ->  data is  " + map);	
+		
+		log.info("*********************Start of  test " +map.get("TestCaseId")+ " **************************");
+
+		lgnPge.login(map.get("Email"), map.get("Password"));
+		
+		acctPge.LoanDetailsPageAccountSummary(map);
+	}
+	
+	@Test(priority = 8, dataProvider = "apt129_130", description = "Verify Loan details page is opened after click on loan number")
+	public void verifyLoanPageOpened_apt_129_130(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
+		
+		SoftAssert softAssert = new SoftAssert();
+		
+		String dateAndTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		
+		String instance = map.get("InstanceId");
+			
+		ctx.getCurrentXmlTest().addParameter( "InstanceId", instance);
+		
+		ctx.getCurrentXmlTest().addParameter( "Date", dateAndTime);
+				
+		log.info("In verifyLoanPageOpened_apt_129_130  ->  data is  " + map);	
+		
+		log.info("*********************Start of  test " +map.get("TestCaseId")+ " **************************");
+
+		lgnPge.login(map.get("Email"), map.get("Password"));
+		
+		acctPge.ClickLoanLoanNumber();
+		
+		softAssert.assertAll();
+	}
+	
+	@Test(priority = 8, dataProvider = "apt_136_137_138", description = "Verify Toolkit messages")
+	public void verifyToolKitMsg_136_137_138(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
+		
+		SoftAssert softAssert = new SoftAssert();
+		
+		String dateAndTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		
+		String instance = map.get("InstanceId");
+			
+		ctx.getCurrentXmlTest().addParameter( "InstanceId", instance);
+		
+		ctx.getCurrentXmlTest().addParameter( "Date", dateAndTime);
+				
+		log.info("In verifyAccountSummaryLoan_apt_128  ->  data is  " + map);	
+		
+		log.info("*********************Start of  test " +map.get("TestCaseId")+ " **************************");
+
+		lgnPge.login(map.get("Email"), map.get("Password"));
+		
+		boolean isDisplayedAcc = acctPge.isDisplayedAccountSummaryToolkit();
+		log.info("Account summary toolkit message is displayed: " +isDisplayedAcc);
+		
+		boolean isDisplayedLoanLast = acctPge.isDisplayedLoanLastUpdateToolkit();
+		log.info("Account summary toolkit message is displayed: " +isDisplayedLoanLast);
+
+		boolean isDisplayedLoan = acctPge.isDisplayedLoanToolkit();
+		log.info("Account summary toolkit message is displayed: " +isDisplayedLoan);
+
+		softAssert.assertAll();
+	}
+	
+	@Test(priority = 9, dataProvider = "apt_131_132", description = "Verify Loan amount due")
+	public void verifyLoanAmountDue_apt_131_132(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
+		
+		SoftAssert softAssert = new SoftAssert();
+		
+		String dateAndTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		
+		String instance = map.get("InstanceId");
+			
+		ctx.getCurrentXmlTest().addParameter( "InstanceId", instance);
+		
+		ctx.getCurrentXmlTest().addParameter( "Date", dateAndTime);
+				
+		log.info("In verifyLoanAmountDue_apt_131_132  ->  data is  " + map);	
+		
+		log.info("*********************Start of  test " +map.get("TestCaseId")+ " **************************");
+
+		lgnPge.login(map.get("Email"), map.get("Password"));
+		
+		acctPge.MakePayment(map);
+		softAssert.assertAll();
+	}
+	
+	@Test(priority = 10, dataProvider = "apt_133_323", description = "Verify Loan amount due")
+	public void verifyLink_133_323(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
+		
+		SoftAssert softAssert = new SoftAssert();
+		
+		String dateAndTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		
+		String instance = map.get("InstanceId");
+			
+		ctx.getCurrentXmlTest().addParameter( "InstanceId", instance);
+		
+		ctx.getCurrentXmlTest().addParameter( "Date", dateAndTime);
+				
+		log.info("In verifyLink_133_323  ->  data is  " + map);	
+		
+		log.info("*********************Start of  test " +map.get("TestCaseId")+ " **************************");
+
+		lgnPge.login(map.get("Email"), map.get("Password"));
+		
+		if ((map.get("LinkToClick")).contentEquals("ApplyLoan")) {
+			acctPge.clickApplyLoan();
+			acctPge.verifyTheURLOpened(map.get("ExpectedURL"));
+		}
+		 if((map.get("LinkToClick")).contentEquals("ViewDisclosures")) {
+			acctPge.clickDisclosures();
+			acctPge.verifyDisclosuresTab(map.get("ExpectedURL"));
+		}
+	}
+
+	@Test(priority = 11, dataProvider = "apt_369_370", description = "Verify Loan amount due")
+	public void verifyToolkitIsNotPresentForDueDateNotPassed_369_370(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
+		
+		SoftAssert softAssert = new SoftAssert();
+		
+		String dateAndTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		
+		String instance = map.get("InstanceId");
+			
+		ctx.getCurrentXmlTest().addParameter( "InstanceId", instance);
+		
+		ctx.getCurrentXmlTest().addParameter( "Date", dateAndTime);
+				
+		log.info("In verifyToolkitIsNotPresentForDueDateNotPassed_369_370  ->  data is  " + map);	
+		
+		log.info("*********************Start of  test " +map.get("TestCaseId")+ " **************************");
+
+		lgnPge.login(map.get("Email"), map.get("Password"));
+		
+		boolean isAccountToolkit = acctPge.verifyAccountToolkitIconPresent();
+		softAssert.assertTrue(isAccountToolkit, "Account toolkit should not displayed for due date passed user: ");
+		
+		boolean isLoanToolkit = acctPge.verifyLoanToolkitIconPresent();
+		softAssert.assertTrue(isLoanToolkit, "Loan toolkit should not displayed for due date passed user: ");
+	}
+
+	@Test(priority = 12, dataProvider = "apt_135", description = "Verify View all link")
+	public void verifyClickOnViewALL_135(HashMap<String, String> map, ITestContext ctx, ITestResult rlt) throws InterruptedException, AWTException, IOException {
+		
+		SoftAssert softAssert = new SoftAssert();
+		
+		String dateAndTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		
+		String instance = map.get("InstanceId");
+			
+		ctx.getCurrentXmlTest().addParameter( "InstanceId", instance);
+		
+		ctx.getCurrentXmlTest().addParameter( "Date", dateAndTime);
+				
+		log.info("In verifyClickOnViewALL_135  ->  data is  " + map);	
+		
+		log.info("*********************Start of  test " +map.get("TestCaseId")+ " **************************");
+
+		lgnPge.login(map.get("Email"), map.get("Password"));
+		acctPge.clickOnViewAllLink();
+	}
+
+
 	@AfterMethod
 	public void tearDown(ITestContext ctx, ITestResult rlt) throws Exception {
 		  

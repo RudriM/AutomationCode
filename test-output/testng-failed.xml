@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.wac.cwp.testcases.SettingsPageTestCase">
+      <class name="com.wac.cwp.testcases.MakePaymentTestCases">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifySetUpRecurring_218_223"/>
           <include name="setUp"/>
+          <include name="verifyPaymentPostingInfo_APT_356"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.wac.cwp.testcases.SettingsPageTestCase -->
+      </class> <!-- com.wac.cwp.testcases.MakePaymentTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

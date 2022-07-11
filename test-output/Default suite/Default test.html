@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 20 09:12:37 EDT 2022</td>
+<td>Started on:</td><td>Mon Jul 11 14:25:02 EDT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12215 ms)</td>
+<tr><td>Total time:</td><td>331 seconds (331110 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,410 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365()'><b>verifyReceiptPopUp_Debit_APT_360_361_362_363_365</b><br>Test class: com.wac.cwp.testcases.MakePaymentTestCases<br>Test method: Verify receipt pop up <br>Parameters: {CardNumber=4111 1111 1111 1111, ReceiptEFee=$3.99, PaymenDate=08/22/2022, ExpiryDate=09/2022, CVV=123.0, WarningMessage=Null, Email=tran.ky@mailinator.com, UserFrom=Null, PaymentAuthorizationDebitInfo=Debit Card ending in 1111, receiptEmail=tran.ky@mailinator.com, paymentPostingInfo=Payment Posting
+Payments made prior to 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account as of the current business day. Payments made after 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account on the next business day.
+If you would like to make your payment during normal business hours then please contact your World Finance branch for assistance.
+It may take up to 48 hours for your new account balance to be reflected in the online payment portal., reciptPaidCustomerName=KY T TRAN, TestCaseId=361.0, OtherAmount=$63.00, TestMethod=verifyReceiptPopUp_Debit_APT_360_361_362_363_365, FeeMessage=Null, ReviewWarningMessage=Null, PaymentAuthorizationPaymentDate=08/22/2022, receiptAmount=$63.00, ReviewPagePaymentAmount=Null, PaymentAuthInformation=By clicking the button to submit this payment, you, KY T TRAN, authorize this one-time payment of $66.99, which includes your World Finance loan payment amount and the E-Complish Fee. Your Loan payment in the amount of $63.00 will be posted to your World Finance account 1054028859. The funds will be charged to your Debit Card ending in 1111. The payment to your World Finance account will be dated 08/22/2022. Additionally, you affirm that you are the Debit Card account holder and can give permission for this charge., receiptAddress=736 N LIMESTONE LN, StatementMessage=Null, NoticeAmount=Null, Password=Test1234, Status=Future, isExecute=YES, PaymentAuthInformationMessage=You have the right to revoke your authorization for this single, one-time Debit Card transation by contacting World Finacne at least 24 hours before your payment date at (309) 681-8000 during the hours of 8:00 AM to 5:00 PM Eastern Monday-Friday., NoticeInfo=Notice of E-Complish Fee
+E-Complish charges a flat E-Complish fee of $3.99 for the use of the Consumer Bill Payment Service certified E-Complish online payment portal. E-Complish provides the technology behind the online payment portal to guarantee PCI-DSS Level 1 Service Provider compliance and NACHA security. E-Complish is not a Financial Institution nor Loan Servicer.
+The total amount of $66.99, which includes your loan payment amount and the E-complish Fee, will appear on your banking statement as a one-time Debit charge from, 'World Finance/E-Complish'.
+You have the right to revoke your authorization for this single one-time Debit Card transaction by contacting E-Complish LLC a least 24 hours before your payment date at the following:
+E-Complish, Inc.
+228 Park Ave S Suite 89324
+New York, NY 10003
+(888) 847-7744
+support@e-complish.com
+M-F 8AM to 5PM Eastern, TotalAmountOnPay=$66.99, PaymentAuthorizationPaymentAmount=Null, InstanceId=5.2751738E7, ReviewPageEFee=Null, TotalAmount=Null, ReviewPagePaymentDate=Null, AccountNumber=null, SavedCardMessage=null, RoutingNumber=null, ReviewPagePaymentMethod=Null, WorldAccountNumber=Null, PaymentMethod=Null, partialPaymentMsg=Null, ErrorMessage=Null, ReviewPageTotalAmount=Null, PaymentAuthorizationCustomerName=Null}, org.testng.TestRunner@58b71ceb, null</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;W10LN-2TJ6BC3&apos;, ip: &apos;172.25.103.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\RUDRI~1.MEH\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53073}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 89d3a5cd79df629b7787e37285fe395a
+*** Element info: {Using=xpath, value=//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at com.wac.cwp.pages.MakePaymentPage.verifyReceiptModal(MakePaymentPage.java:1321)
+	at com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365(MakePaymentTestCases.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1086508626", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1086508626'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;W10LN-2TJ6BC3&apos;, ip: &apos;172.25.103.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\RUDRI~1.MEH\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53073}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 89d3a5cd79df629b7787e37285fe395a
+*** Element info: {Using=xpath, value=//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at com.wac.cwp.pages.MakePaymentPage.verifyReceiptModal(MakePaymentPage.java:1321)
+	at com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365(MakePaymentTestCases.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>84</td>
+<td>com.wac.cwp.testcases.MakePaymentTestCases@7dfb0c0f</td></tr>
+<tr>
+<td title='com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365()'><b>verifyReceiptPopUp_Debit_APT_360_361_362_363_365</b><br>Test class: com.wac.cwp.testcases.MakePaymentTestCases<br>Test method: Verify receipt pop up <br>Parameters: {CardNumber=4111 1111 1111 1111, ReceiptEFee=$3.99, PaymenDate=08/02/2022, ExpiryDate=09/2022, CVV=523.0, WarningMessage=Null, Email=tran.ky@mailinator.com, UserFrom=Null, PaymentAuthorizationDebitInfo=Debit Card ending in 1111, receiptEmail=tran.ky@mailinator.com, paymentPostingInfo=Payment Posting
+Payments made prior to 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account as of the current business day. Payments made after 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account on the next business day.
+If you would like to make your payment during normal business hours then please contact your World Finance branch for assistance.
+It may take up to 48 hours for your new account balance to be reflected in the online payment portal., reciptPaidCustomerName=KY T TRAN, TestCaseId=360.0, OtherAmount=$53.00, TestMethod=verifyReceiptPopUp_Debit_APT_360_361_362_363_365, FeeMessage=Null, ReviewWarningMessage=Null, PaymentAuthorizationPaymentDate=08/02/2022, receiptAmount=$53.00, ReviewPagePaymentAmount=Null, PaymentAuthInformation=By clicking the button to submit this payment, you, KY T TRAN, authorize this one-time payment of $56.99, which includes your World Finance loan payment amount and the E-Complish Fee. Your Loan payment in the amount of $53.00 will be posted to your World Finance account 1054028859. The funds will be charged to your Debit Card ending in 1111. The payment to your World Finance account will be dated 08/02/2022. Additionally, you affirm that you are the Debit Card account holder and can give permission for this charge., receiptAddress=736 N LIMESTONE LN, StatementMessage=Null, NoticeAmount=Null, Password=Test1234, Status=Future, isExecute=YES, PaymentAuthInformationMessage=You have the right to revoke your authorization for this single, one-time Debit Card transation by contacting World Finacne at least 24 hours before your payment date at (309) 681-8000 during the hours of 8:00 AM to 5:00 PM Eastern Monday-Friday., NoticeInfo=Notice of E-Complish Fee
+E-Complish charges a flat E-Complish fee of $3.99 for the use of the Consumer Bill Payment Service certified E-Complish online payment portal. E-Complish provides the technology behind the online payment portal to guarantee PCI-DSS Level 1 Service Provider compliance and NACHA security. E-Complish is not a Financial Institution nor Loan Servicer.
+The total amount of $56.99, which includes your loan payment amount and the E-complish Fee, will appear on your banking statement as a one-time Debit charge from, 'World Finance/E-Complish'.
+You have the right to revoke your authorization for this single one-time Debit Card transaction by contacting E-Complish LLC a least 24 hours before your payment date at the following:
+E-Complish, Inc.
+228 Park Ave S Suite 89324
+New York, NY 10003
+(888) 847-7744
+support@e-complish.com
+M-F 8AM to 5PM Eastern, TotalAmountOnPay=$56.99, PaymentAuthorizationPaymentAmount=Null, InstanceId=5.2751737E7, ReviewPageEFee=Null, TotalAmount=Null, ReviewPagePaymentDate=Null, AccountNumber=null, SavedCardMessage=null, RoutingNumber=null, ReviewPagePaymentMethod=Null, WorldAccountNumber=Null, PaymentMethod=Null, partialPaymentMsg=Null, ErrorMessage=Null, ReviewPageTotalAmount=Null, PaymentAuthorizationCustomerName=Null}, org.testng.TestRunner@58b71ceb, null</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;W10LN-2TJ6BC3&apos;, ip: &apos;172.25.103.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\RUDRI~1.MEH\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:52955}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8aac31f469bc971ef0804225326946c1
+*** Element info: {Using=xpath, value=//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at com.wac.cwp.pages.MakePaymentPage.verifyReceiptModal(MakePaymentPage.java:1321)
+	at com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365(MakePaymentTestCases.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1428664849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1428664849'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;W10LN-2TJ6BC3&apos;, ip: &apos;172.25.103.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\RUDRI~1.MEH\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:52955}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8aac31f469bc971ef0804225326946c1
+*** Element info: {Using=xpath, value=//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at com.wac.cwp.pages.MakePaymentPage.verifyReceiptModal(MakePaymentPage.java:1321)
+	at com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365(MakePaymentTestCases.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>81</td>
+<td>com.wac.cwp.testcases.MakePaymentTestCases@7dfb0c0f</td></tr>
+<tr>
+<td title='com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365()'><b>verifyReceiptPopUp_Debit_APT_360_361_362_363_365</b><br>Test class: com.wac.cwp.testcases.MakePaymentTestCases<br>Test method: Verify receipt pop up <br>Parameters: {CardNumber=4111 1111 1111 1111, ReceiptEFee=$3.99, PaymenDate=09/12/2022, ExpiryDate=09/2022, CVV=123.0, WarningMessage=Null, Email=tran.ky@mailinator.com, UserFrom=Null, PaymentAuthorizationDebitInfo=Debit Card ending in 1111, receiptEmail=tran.ky@mailinator.com, paymentPostingInfo=Payment Posting
+Payments made prior to 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account as of the current business day. Payments made after 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account on the next business day.
+If you would like to make your payment during normal business hours then please contact your World Finance branch for assistance.
+It may take up to 48 hours for your new account balance to be reflected in the online payment portal., reciptPaidCustomerName=KY T TRAN, TestCaseId=362.0, OtherAmount=$82.00, TestMethod=verifyReceiptPopUp_Debit_APT_360_361_362_363_365, FeeMessage=Null, ReviewWarningMessage=Null, PaymentAuthorizationPaymentDate=09/12/2022, receiptAmount=$82.00, ReviewPagePaymentAmount=Null, PaymentAuthInformation=By clicking the button to submit this payment, you, KY T TRAN, authorize this one-time payment of $85.99, which includes your World Finance loan payment amount and the E-Complish Fee. Your Loan payment in the amount of $82.00 will be posted to your World Finance account 1054028859. The funds will be charged to your Debit Card ending in 1111. The payment to your World Finance account will be dated 09/12/2022. Additionally, you affirm that you are the Debit Card account holder and can give permission for this charge., receiptAddress=736 N LIMESTONE LN, StatementMessage=Null, NoticeAmount=Null, Password=Test1234, Status=Future, isExecute=YES, PaymentAuthInformationMessage=You have the right to revoke your authorization for this single, one-time Debit Card transation by contacting World Finacne at least 24 hours before your payment date at (309) 681-8000 during the hours of 8:00 AM to 5:00 PM Eastern Monday-Friday., NoticeInfo=Notice of E-Complish Fee
+E-Complish charges a flat E-Complish fee of $3.99 for the use of the Consumer Bill Payment Service certified E-Complish online payment portal. E-Complish provides the technology behind the online payment portal to guarantee PCI-DSS Level 1 Service Provider compliance and NACHA security. E-Complish is not a Financial Institution nor Loan Servicer.
+The total amount of $85.99, which includes your loan payment amount and the E-complish Fee, will appear on your banking statement as a one-time Debit charge from, 'World Finance/E-Complish'.
+You have the right to revoke your authorization for this single one-time Debit Card transaction by contacting E-Complish LLC a least 24 hours before your payment date at the following:
+E-Complish, Inc.
+228 Park Ave S Suite 89324
+New York, NY 10003
+(888) 847-7744
+support@e-complish.com
+M-F 8AM to 5PM Eastern, TotalAmountOnPay=$85.99, PaymentAuthorizationPaymentAmount=Null, InstanceId=5.2751739E7, ReviewPageEFee=Null, TotalAmount=Null, ReviewPagePaymentDate=Null, AccountNumber=null, SavedCardMessage=null, RoutingNumber=null, ReviewPagePaymentMethod=Null, WorldAccountNumber=Null, PaymentMethod=Null, partialPaymentMsg=Null, ErrorMessage=Null, ReviewPageTotalAmount=Null, PaymentAuthorizationCustomerName=Null}, org.testng.TestRunner@58b71ceb, null</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;W10LN-2TJ6BC3&apos;, ip: &apos;172.25.103.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\RUDRI~1.MEH\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1cdbc3f4310f0608fbde3ed2bbd00278
+*** Element info: {Using=xpath, value=//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at com.wac.cwp.pages.MakePaymentPage.verifyReceiptModal(MakePaymentPage.java:1321)
+	at com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365(MakePaymentTestCases.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace217911413", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace217911413'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]&quot;}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:48&apos;
+System info: host: &apos;W10LN-2TJ6BC3&apos;, ip: &apos;172.25.103.98&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: C:\Users\RUDRI~1.MEH\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:53188}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1cdbc3f4310f0608fbde3ed2bbd00278
+*** Element info: {Using=xpath, value=//label[text() = &apos;Paid By&apos;]/following-sibling::span[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.getText(Unknown Source)
+	at com.wac.cwp.pages.MakePaymentPage.verifyReceiptModal(MakePaymentPage.java:1321)
+	at com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365(MakePaymentTestCases.java:738)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>83</td>
+<td>com.wac.cwp.testcases.MakePaymentTestCases@7dfb0c0f</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +479,39 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.wac.cwp.testcases.SettingsPageTestCase.verifyManageRecurringChange_APT_221()'><b>verifyManageRecurringChange_APT_221</b><br>Test class: com.wac.cwp.testcases.SettingsPageTestCase<br>Test method: Update Manage Recurring payment<br>Parameters: {CardNumber=4111 1111 1111 1111, isExecute=YES, AccountPhone=Null, ExpiryDate=30-Jun-2025, CVV=111.0, Email=tran.ky@mailinator.com, RemainingPayments=Null, PaymentDate=06-Dec-2023, InstanceId=5.2159812E7, AccountEmail=Null, TestCaseId=221.0, Addresss=Null, NextPaymentsAndMethods=Null, stopRecurringBody=Null, TestMethod=verifyManageRecurringChange_APT_221, LoanNumber=Null, RecurringLoanNumber1=Null, RecurringLoanNumber0=Null, NoOfLoans=Null, FullName=Null, RecurringLoanNumber2=Null, MonthlyAmount=Null, Password=Test1234}, org.testng.TestRunner@6f6621e3, null</td>
+<td title='com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365()'><b>verifyReceiptPopUp_Debit_APT_360_361_362_363_365</b><br>Test class: com.wac.cwp.testcases.MakePaymentTestCases<br>Test method: Verify receipt pop up <br>Parameters: {CardNumber=4111 1111 1111 1111, ReceiptEFee=$3.99, PaymenDate=12/12/2022, ExpiryDate=09/2022, CVV=123.0, WarningMessage=Null, Email=tran.ky@mailinator.com, UserFrom=Null, PaymentAuthorizationDebitInfo=Debit Card ending in 1111, receiptEmail=tran.ky@mailinator.com, paymentPostingInfo=Payment Posting
+Payments made prior to 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account as of the current business day. Payments made after 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account on the next business day.
+If you would like to make your payment during normal business hours then please contact your World Finance branch for assistance.
+It may take up to 48 hours for your new account balance to be reflected in the online payment portal., reciptPaidCustomerName=KY T TRAN, TestCaseId=363.0, OtherAmount=$102.00, TestMethod=verifyReceiptPopUp_Debit_APT_360_361_362_363_365, FeeMessage=Null, ReviewWarningMessage=Null, PaymentAuthorizationPaymentDate=12/12/2022, receiptAmount=$102.00, ReviewPagePaymentAmount=Null, PaymentAuthInformation=By clicking the button to submit this payment, you, KY T TRAN, authorize this one-time payment of $105.99, which includes your World Finance loan payment amount and the E-Complish Fee. Your Loan payment in the amount of $102.00 will be posted to your World Finance account 1054028859. The funds will be charged to your Debit Card ending in 1111. The payment to your World Finance account will be dated 12/12/2022. Additionally, you affirm that you are the Debit Card account holder and can give permission for this charge., receiptAddress=736 N LIMESTONE LN, StatementMessage=Null, NoticeAmount=Null, Password=Test1234, Status=Future, isExecute=YES, PaymentAuthInformationMessage=You have the right to revoke your authorization for this single, one-time Debit Card transation by contacting World Finacne at least 24 hours before your payment date at (309) 681-8000 during the hours of 8:00 AM to 5:00 PM Eastern Monday-Friday., NoticeInfo=Notice of E-Complish Fee
+E-Complish charges a flat E-Complish fee of $3.99 for the use of the Consumer Bill Payment Service certified E-Complish online payment portal. E-Complish provides the technology behind the online payment portal to guarantee PCI-DSS Level 1 Service Provider compliance and NACHA security. E-Complish is not a Financial Institution nor Loan Servicer.
+The total amount of $105.99, which includes your loan payment amount and the E-complish Fee, will appear on your banking statement as a one-time Debit charge from, 'World Finance/E-Complish'.
+You have the right to revoke your authorization for this single one-time Debit Card transaction by contacting E-Complish LLC a least 24 hours before your payment date at the following:
+E-Complish, Inc.
+228 Park Ave S Suite 89324
+New York, NY 10003
+(888) 847-7744
+support@e-complish.com
+M-F 8AM to 5PM Eastern, TotalAmountOnPay=$105.99, PaymentAuthorizationPaymentAmount=Null, InstanceId=5.275174E7, ReviewPageEFee=Null, TotalAmount=Null, ReviewPagePaymentDate=Null, AccountNumber=null, SavedCardMessage=null, RoutingNumber=null, ReviewPagePaymentMethod=Null, WorldAccountNumber=Null, PaymentMethod=Null, partialPaymentMsg=Null, ErrorMessage=Null, ReviewPageTotalAmount=Null, PaymentAuthorizationCustomerName=Null}, org.testng.TestRunner@58b71ceb, null</td>
 <td></td>
-<td>8</td>
-<td>com.wac.cwp.testcases.SettingsPageTestCase@2657d4dd</td></tr>
+<td>27</td>
+<td>com.wac.cwp.testcases.MakePaymentTestCases@7dfb0c0f</td></tr>
+<tr>
+<td title='com.wac.cwp.testcases.MakePaymentTestCases.verifyReceiptPopUp_Debit_APT_360_361_362_363_365()'><b>verifyReceiptPopUp_Debit_APT_360_361_362_363_365</b><br>Test class: com.wac.cwp.testcases.MakePaymentTestCases<br>Test method: Verify receipt pop up <br>Parameters: {CardNumber=4111 1111 1111 1111, ReceiptEFee=$3.99, PaymenDate=09/22/2022, ExpiryDate=09/2022, CVV=123.0, WarningMessage=Null, Email=tran.ky@mailinator.com, UserFrom=Null, PaymentAuthorizationDebitInfo=Debit Card ending in 1111, receiptEmail=tran.ky@mailinator.com, paymentPostingInfo=Payment Posting
+Payments made prior to 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account as of the current business day. Payments made after 5:00 pm Eastern / 2:00 pm Pacific will be credited to your account on the next business day.
+If you would like to make your payment during normal business hours then please contact your World Finance branch for assistance.
+It may take up to 48 hours for your new account balance to be reflected in the online payment portal., reciptPaidCustomerName=KY T TRAN, TestCaseId=365.0, OtherAmount=$122.00, TestMethod=verifyReceiptPopUp_Debit_APT_360_361_362_363_365, FeeMessage=Null, ReviewWarningMessage=Null, PaymentAuthorizationPaymentDate=09/22/2022, receiptAmount=$122.00, ReviewPagePaymentAmount=Null, PaymentAuthInformation=By clicking the button to submit this payment, you, KY T TRAN, authorize this one-time payment of $125.99, which includes your World Finance loan payment amount and the E-Complish Fee. Your Loan payment in the amount of $122.00 will be posted to your World Finance account 1054028859. The funds will be charged to your Debit Card ending in 1111. The payment to your World Finance account will be dated 09/22/2022. Additionally, you affirm that you are the Debit Card account holder and can give permission for this charge., receiptAddress=736 N LIMESTONE LN, StatementMessage=Null, NoticeAmount=Null, Password=Test1234, Status=Future, isExecute=YES, PaymentAuthInformationMessage=You have the right to revoke your authorization for this single, one-time Debit Card transation by contacting World Finacne at least 24 hours before your payment date at (309) 681-8000 during the hours of 8:00 AM to 5:00 PM Eastern Monday-Friday., NoticeInfo=Notice of E-Complish Fee
+E-Complish charges a flat E-Complish fee of $3.99 for the use of the Consumer Bill Payment Service certified E-Complish online payment portal. E-Complish provides the technology behind the online payment portal to guarantee PCI-DSS Level 1 Service Provider compliance and NACHA security. E-Complish is not a Financial Institution nor Loan Servicer.
+The total amount of $125.99, which includes your loan payment amount and the E-complish Fee, will appear on your banking statement as a one-time Debit charge from, 'World Finance/E-Complish'.
+You have the right to revoke your authorization for this single one-time Debit Card transaction by contacting E-Complish LLC a least 24 hours before your payment date at the following:
+E-Complish, Inc.
+228 Park Ave S Suite 89324
+New York, NY 10003
+(888) 847-7744
+support@e-complish.com
+M-F 8AM to 5PM Eastern, TotalAmountOnPay=$125.99, PaymentAuthorizationPaymentAmount=Null, InstanceId=5.2751741E7, ReviewPageEFee=Null, TotalAmount=Null, ReviewPagePaymentDate=Null, AccountNumber=null, SavedCardMessage=null, RoutingNumber=null, ReviewPagePaymentMethod=Null, WorldAccountNumber=Null, PaymentMethod=Null, partialPaymentMsg=Null, ErrorMessage=Null, ReviewPageTotalAmount=Null, PaymentAuthorizationCustomerName=Null}, org.testng.TestRunner@58b71ceb, null</td>
+<td></td>
+<td>24</td>
+<td>com.wac.cwp.testcases.MakePaymentTestCases@7dfb0c0f</td></tr>
 </table><p>
 </body>
 </html>
